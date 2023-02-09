@@ -3,18 +3,13 @@ import {
   FriendItem,
   FriendAvatar,
   FriendIsOnline,
-  FriendIsOffline,
   FriendName,
 } from './FriendListItem.styled';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <FriendItem>
-      {isOnline ? (
-        <FriendIsOnline>{isOnline}</FriendIsOnline>
-      ) : (
-        <FriendIsOffline>{isOnline}</FriendIsOffline>
-      )}
+      <FriendIsOnline bul={isOnline}>{isOnline}</FriendIsOnline>
       <FriendAvatar src={avatar} alt="User avatar" width="48" />
       <FriendName>{name}</FriendName>
     </FriendItem>

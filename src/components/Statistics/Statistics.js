@@ -11,7 +11,8 @@ import {
 export function Statistics({ title, stats }) {
   return (
     <StatisticsBlock>
-      {title ? <StatisticsTitle>{title}</StatisticsTitle> : null}
+      {title && <StatisticsTitle>{title}</StatisticsTitle> }
+      {/* {title ? <StatisticsTitle>{title}</StatisticsTitle> : null} */}
       <StatisticsList>
         {stats.map(stat => (
           <StatisticsItem key={stats.id}>

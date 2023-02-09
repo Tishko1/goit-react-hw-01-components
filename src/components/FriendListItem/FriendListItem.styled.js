@@ -23,15 +23,9 @@ export const FriendIsOnline = styled.span`
   display: inline-block;
   margin-right: 30px;
   background-color: green;
-`;
-
-export const FriendIsOffline = styled.span`
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 30px;
-  background-color: red;
+  background-color: ${props => {
+    return props.bul ? 'green' : 'red';
+  }};
 `;
 
 export const FriendName = styled.p`
